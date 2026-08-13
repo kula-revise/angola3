@@ -906,54 +906,44 @@ const RESULTS = {
 const FLOW = [
   {
     "type": "story",
-    "marker": "The hallway",
-    "markerLabel": "Somewhere you know &middot; that week",
+    "marker": "Everyone agrees what happened",
+    "markerLabel": "The canal &middot; November 1956",
     "lines": [
       {
-        "mark": "Monday",
-        "text": "Two boys are pulled apart outside the tuckshop."
+        "text": "Israel attacks Egypt. Two days later British and French forces bomb Egyptian airfields and land at the canal."
       },
       {
-        "mark": "Monday",
-        "text": "He says he stepped in because his cousin was getting hurt."
+        "text": "London and Paris say they moved in to separate two armies and to keep the canal open."
       },
       {
-        "mark": "Tuesday",
-        "text": "A teacher who saw it says he had been waiting all week for the chance."
+        "text": "Cairo says the three of them agreed it in advance and the fighting was the excuse."
       },
       {
-        "mark": "Wednesday",
-        "text": "Both of them are still saying the same thing."
+        "text": "**Nobody disputes the landings.**"
       },
       {
-        "text": "**Same shove. Same second.**"
-      },
-      {
-        "text": "Nobody disagrees about what happened. They disagree about why."
-      },
-      {
-        "text": "You already know that why is the hard part. Now look for it in a government record."
+        "text": "The argument is only about why. In this lesson two records agree on where South African troops went, and split completely on what they went for."
       }
     ]
   },
   {
     "type": "question",
     "kind": "instinct",
-    "q": "Which of these would help you most in working out why he stepped in?",
+    "q": "Which part of this would be hardest for a historian to settle?",
     "options": [
-      "What he had said about that boy in the days before",
-      "How hard the shove actually was on the day it happened",
-      "Which of the two boys was standing closer to the door",
-      "How many other pupils saw the whole thing happen that day"
+      "The dates on which each of the three forces began its attack",
+      "The number of aircraft and ships that took part in the landings",
+      "Whether the three governments had agreed the whole plan beforehand",
+      "The places along the canal where the landings actually took place"
     ],
-    "correct": 0,
-    "explanation": "Nothing scored. Option {opt0} gets you closest, because motive lives in what came before, not in the moment itself. The others describe the event well enough. But none of them tells you what he wanted, and that is what is being argued about.",
+    "correct": 2,
+    "explanation": "There is no score on this one. Dates, numbers and places all leave records that can be checked against each other. An intention leaves a record only if somebody chose to write it down. That is why what happened is usually easy and why it happened is where the marks are. In this lesson you will meet two records that agree on the movements and fight over the reason.",
     "noSource": true
   },
   {
     "type": "content",
     "tag": "The turn",
-    "html": "<h2>Two records can agree on the facts and still disagree</h2><p>Sources argue about three different things, and it helps to know which one you are looking at.</p><p><strong>What happened</strong> is usually the easiest to settle. <strong>When it happened</strong> is next. <strong>Why it happened</strong> is where records fight, and it is where the marks are.</p><p>In Paper 1 this comes as: <em>explain how the information in Source A differs from the information in Source B</em>. Name the thing they disagree about, then a line from each.</p>",
+    "html": "<h2>Two records can agree on the facts and still disagree</h2><p>You just separated what happened from why it happened. Sources argue about three different things, and it helps to know which one you are looking at.</p><p><strong>What happened</strong> is usually the easiest to settle. <strong>When it happened</strong> is next. <strong>Why it happened</strong> is where records fight, and it is where the marks are.</p><p>In Paper 1 this comes as: <em>explain how the information in Source A differs from the information in Source B</em>. Name the thing they disagree about, then a line from each.</p>",
     "remember": "Nobody disputes that South Africa crossed the border. They dispute what it was for.",
     "terms": [
       {
@@ -1034,7 +1024,7 @@ const FLOW = [
     "source": {
       "attr": "Source D: adapted from The Angola Crisis 1974 to 1975, Office of the Historian, United States Department of State. A United States government publication.",
       "body": "<p>During the summer of 1975, the Soviet-supported MPLA was able to consolidate power in Luanda and oust the U.S.-supported FNLA from the capital &hellip;</p><p>At the same time, UNITA, which enjoyed U.S. support, approached the Apartheid government in South Africa for military reinforcement. Pretoria, with the aim to end the use of Angola as a base for rebels fighting for the independence of South Africa-occupied Namibia, contributed forces that entered southern Angola in October and made rapid progress toward the capital.</p>",
-      "toggle": "Look at how the reason is given: as a plain statement of aim, with no judgement attached. Pretoria wanted to stop Angola being used as a base, and it sent forces. The account calls the South African government the Apartheid government, so the writer isn't sympathetic. But it still reports the motive as a stated fact rather than something to be tested. That is a choice, and it is the difference this lesson turns on.",
+      "toggle": "Look at how the reason is given: as a plain statement of aim, with no judgement attached. Pretoria wanted to stop Angola being used as a base, and it sent forces. The account calls the South African government the Apartheid government, so the writer isn't sympathetic. But it still reports the motive as a stated fact rather than something to be tested. That is a choice, and it is the difference this lesson is built on.",
       "toggleLabel": "What does this actually mean?"
     },
     "terms": [
@@ -1778,7 +1768,7 @@ function showResults(){
   });
   /* The button at the end of the lesson is the thing that continues. It does
      not point at a control somewhere else on the page. */
-  document.getElementById("finish-btn").addEventListener("click",()=>{ KulaLMS.advance(); });
+  document.getElementById("finish-btn").onclick = ()=>{ KulaLMS.advance(); };
   KulaLMS.completed();
 }
 
